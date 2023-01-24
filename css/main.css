@@ -5,6 +5,7 @@
   --negro: #212529;
   --gris: #6c757d;
   --gris-oscuro: #343a40;
+  --gris-claro:#CED4DA;
   --claro: #f8f9fa;
 }
 * {
@@ -17,6 +18,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-family: "ITC Avant Garde Std Bk";
 }
 .header-container {
   width: 100%;
@@ -41,7 +43,6 @@ main {
 }
 .slogan-container h1 {
   font-size: 62px;
-  /* font-family: 'ITC Avant Garde Std Bk'; */
   font-family: "Ivy Mode";
   font-weight: bold;
   color: var(--rojo);
@@ -73,6 +74,41 @@ main {
   border-color: var(--amarillo);
   color: var(--claro);
 }
+.mobile-menu{
+  display: none;
+  position: fixed;
+  background-color: var(--rojo);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  opacity: .6;
+  z-index: 6;
+}
+.nav-mobile{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.nav-mobile .nav-item{
+width: 100%;
+text-align: center;
+}
+.nav-mobile .nav-link{
+  color: var(--amarillo);
+  font-size: 22px;
+}
+.nav-mobile .nav-link:hover{
+  color: var(--rojo-claro);
+}
+
+.icon-menu{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
+  color: var(--amarillo);
+}
 
 /*------------------------------------------------------------------*/
 
@@ -85,13 +121,14 @@ main {
   margin-bottom: 20px;
 }
 .servicios-title-container h3 {
-  padding: 20px 0 5px;
+  padding: 20px 10px 5px;
   font-size: 32px;
   color: var(--rojo);
 }
 .servicios-title-container p {
   font-size: 14px;
   color: var(--gris-oscuro);
+  padding: 0 15px;
 }
 
 .servicios-cards-container {
@@ -173,6 +210,9 @@ main {
   padding-right: 50px;
   color: var(--amarillo);
 }
+.about-history-container h3{
+  font-size: 32px;
+}
 .about-valores-card {
   display: flex;
   flex-direction: row;
@@ -180,11 +220,15 @@ main {
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 5px;
+  font-size: 18px;
+}
+.about-valores-text h5{
+  font-size: 28px;
 }
 .about-valores-img {
   width: 50%;
   min-width: 275px;
-  max-width: 450px;
+  max-width: 350px;
 }
 .about-valores-text {
   width: 50%;
@@ -206,16 +250,18 @@ main {
 }
 .contacto-form {
   width: 40%;
-  min-width: 320px;
+  min-width: 310px;
   z-index: 2;
   margin: 0 10%;
 }
 .contacto-form h3 {
   font-size: 32px;
+  color: var(--amarillo);
 }
 .contacto-form p {
   font-size: 14px;
   padding-bottom: 20px;
+  color: var(--gris);
 }
 .contacto-form form {
   width: 100%;
@@ -226,13 +272,34 @@ main {
   border-radius: 0;
   border: none;
   background-color: transparent;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--gris);
+}
+.contacto-form input::placeholder{
+  color: var(--gris-claro);
+}
+.contacto-form input:focus{
+  border-bottom: 2px solid var(--amarillo);
+  box-shadow: none;
+}
+.contacto-container textarea::placeholder{
+  color: var(--gris-claro);
+}
+.contacto-form textarea:focus{
+  border: 2px solid var(--amarillo);
+  box-shadow: none;
 }
 #btnEnviar {
   margin: 10px 0;
   width: 100%;
   border-radius: 0;
   padding: 10px 0;
+  background-color: var(--amarillo);
+  border: none;
+  color: var(--claro);
+}
+#btnEnviar:hover{
+background-color: var(--rojo-claro);
+transition: .5s;
 }
 .contacto-info-container {
   width: 40%;
@@ -240,18 +307,23 @@ main {
   justify-content: center;
   flex-direction: column;
   min-width: 300px;
-  background-color: rgb(172, 48, 48);
+  background-color: var(--rojo);
   height: 350px;
   z-index: 2;
 }
 .contacto-info-container h5 {
   font-size: 22px;
   padding: 0 25px;
+  color: var(--gris-oscuro);
 }
 .contacto-info {
   margin: 10px 25px;
-  color: gray;
+  color: var(--negro);
   font-size: 16px;
+}
+.contacto-info:hover{
+  color: var(--amarillo);
+  transition: .3s;
 }
 .contacto-info i {
   font-size: 20px;
@@ -263,7 +335,7 @@ main {
   top: 0;
   width: 200px;
   height: 100%;
-  background-color: red;
+  background-color: var(--rojo-claro);
   z-index: 1;
 }
 
@@ -287,25 +359,56 @@ main {
 }
 
 @media (max-width: 800px) {
-  .header-container{
+  .header-container {
     flex-direction: column-reverse;
   }
-  .slogan-container h1{
+  .slogan-container {
+    padding: 10px 15px;
+  }
+  .slogan-container h1 {
     font-size: 48px;
   }
-  .slogan-container p{
+  .slogan-container p {
     font-size: 14px;
   }
-  .menu-container{
+  .menu-container {
     display: none;
   }
-  .contacto-franja{
+  .about-valores-card{
+    font-size: 14px;
+  }
+  .contacto-form{
+    width: 70%;
+    padding: 0 10px;
+  }
+  .contacto-franja {
     display: none;
   }
 }
 
-@media (max-width: 375px){
-  .slogan-container h1{
-    font-size: 20px;
+@media (max-width: 375px) {
+  .slogan-container h1 {
+    font-size: 36px;
+  }
+  .slogan-container p {
+    font-size: 12px;
+  }
+  .servicios-title-container h3 {
+    font-size: 24px;
+  }
+  .servicios-title-container p{
+    font-size: 12px;
+  }
+  .about-history-container{
+    padding: 0 15px;
+  }
+.contacto-form h3{
+  font-size: 24px;
+}
+.contacto-form p{
+  font-size: 12px;
+}
+  .whap-float a{
+    font-size: 40px;
   }
 }
