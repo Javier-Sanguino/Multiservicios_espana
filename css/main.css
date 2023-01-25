@@ -51,6 +51,7 @@ main {
   font-size: 18px;
   max-width: 600px;
   color: var(--claro);
+  font-weight: 100;
 }
 .btn-header button {
   margin: 20px 5px 10px;
@@ -75,14 +76,19 @@ main {
   color: var(--claro);
 }
 .mobile-menu{
-  display: none;
   position: fixed;
-  background-color: var(--rojo);
+  background-color: rgba(194, 16, 16, 0.5);
   width: 100vw;
   height: 100vh;
   top: 0;
-  opacity: .6;
+  right: 100%;
+  backdrop-filter: blur(2px);
   z-index: 6;
+  transition: .5s;
+}
+.mobile-menu.active{
+  right: 0;
+  transition: .5s;
 }
 .nav-mobile{
   height: 100%;
@@ -101,11 +107,22 @@ text-align: center;
 .nav-mobile .nav-link:hover{
   color: var(--rojo-claro);
 }
-
 .icon-menu{
   position: fixed;
   top: 10px;
   left: 10px;
+  font-size: 25px;
+  color: var(--amarillo);
+  transition: .5s;
+}
+.icon-menu.hidden{
+  left: -30px;
+  transition: .5s;
+}
+.close-icon{
+  position: absolute;
+  top: 5px;
+  right: 10px;
   font-size: 25px;
   color: var(--amarillo);
 }
@@ -197,7 +214,8 @@ text-align: center;
 .about-container {
   color: var(--negro);
   width: 100%;
-  background-color: var(--rojo);
+  /* background-color: var(--rojo); */
+  background-image: linear-gradient(145deg, var(--rojo-claro), var(--amarillo));
 }
 .about-history-container {
   height: 60vh;
@@ -233,12 +251,13 @@ text-align: center;
 .about-valores-text {
   width: 50%;
   min-width: 300px;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 /*--------------------------------------------------------------------------*/
 
 .contacto-container {
+  padding-top: 15px;
   width: 100%;
   height: 85vh;
   display: flex;
