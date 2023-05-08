@@ -345,10 +345,13 @@ transition: .5s;
 }
 .contacto-info {
   margin: 10px 25px;
+}
+.contacto-info a{
+  text-decoration: none;
   color: var(--negro);
   font-size: 16px;
 }
-.contacto-info:hover{
+.contacto-info a:hover{
   color: var(--amarillo);
   transition: .3s;
 }
