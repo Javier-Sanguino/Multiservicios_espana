@@ -20,18 +20,18 @@
             <nav class="menu-container">
                 <ul class="nav justify-content-end">
                     <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Servicios</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
             <div class="icon-menu" id="iconMenu" onclick="showMenu()"><i class="fas fa-hamburger"></i></div>
             <div class="mobile-menu" id="menu-mobile">
                 <ul class="nav nav-mobile">
-                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Servicios</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="showMenu()">Inicio</a></li>
+                    <li class="nav-item"><a href="#servicios" class="nav-link" onclick="showMenu()">Servicios</a></li>
+                    <li class="nav-item"><a href="#nosotros" class="nav-link" onclick="showMenu()">Nosotros</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link" onclick="showMenu()">Contacto</a></li>
                 </ul>
                 <div class="close-icon" id="close-icon" onclick="showMenu()"><i class="fas fa-times"></i></div>
             </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </header>
-        <section class="servicios-container">
+        <section class="servicios-container" id="servicios">
             <div class="servicios-title-container">
                 <h3>Nuestros Servicios</h3>
                 <p>Descubre nuestra amplia gama de servicios y encuentra soluciones personalizadas para tus
@@ -66,7 +66,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <p>En nuestra empresa, nos especializamos en la elaboración de compras en
+                                    <p class="modal-body-text">En <span class="brand">MEZ</span>, nos especializamos en la elaboración de compras en
                                         licitaciones
                                         públicas de
                                         todo tipo de implementos. Contamos con una amplia experiencia en compras
@@ -97,7 +97,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <p>En nuestra empresa, ofrecemos un amplio servicio de mantenimiento de maquinarias
+                                    <p class="modal-body-text">En <span class="brand">MEZ</span>, ofrecemos un amplio servicio de mantenimiento de maquinarias
                                         industriales,
                                         incluyendo montacargas, cuentacables, balanzas de alta capacidad y muchos más.
                                         Con varios años
@@ -134,7 +134,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <p>En MEZ, ofrecemos un servicio completo de instalación, venta y mantenimiento de
+                                    <p class="modal-body-text">En <span class="brand">MEZ</span>, ofrecemos un servicio completo de instalación, venta y mantenimiento de
                                         plantas
                                         ornamentales para zonas verdes. No solo proporcionamos plantas de todos los
                                         tipos, sino que
@@ -172,7 +172,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <p>En MEZ, también ofrecemos servicios de apicultura. Contamos con un equipo de
+                                    <p class="modal-body-text">En <span class="brand">MEZ</span>, también ofrecemos servicios de apicultura. Contamos con un equipo de
                                         expertos que se
                                         dedica a recolectar abejas y panales para movilizarlos y asegurarse de que se
                                         mantengan en un
@@ -203,7 +203,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-container">
+        <section class="about-container" id="nosotros">
             <div class="about-history-container">
                 <h3>Nuestra Historia</h3>
                 <div class="about-history">
@@ -282,7 +282,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacto-container">
+        <section class="contacto-container" id="contacto">
             <div class="contacto-form">
                 <h3>Contáctate con Nosotros.</h3>
                 <p>Lorem, consectetur adipisicing elit. Incidunt eum aspernatur laboriosam amet
