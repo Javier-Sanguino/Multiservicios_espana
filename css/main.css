@@ -24,6 +24,7 @@ main {
   font-family: "Ivy Mode";
   color: var(--rojo);
   font-weight: bold;
+  font-size: 1.25em;
 }
 .header-container {
   width: 100%;
